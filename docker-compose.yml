@@ -11,5 +11,13 @@ services:
       - .:/myapp
     ports:
       - "9000:9000"
+  posts:
+    image: elixir:1.5.1
+    build: ./services/posts
+    command: mix phx.server
+    volumes:
+      - ./services/posts:/posts
+    ports:
+      - "4000:4000"
     depends_on:
       - db
