@@ -1,7 +1,11 @@
 module Main exposing (..)
 
-import Html exposing (Html, h1, text)
-import Html.Attributes exposing (style)
+import Html exposing (Html, h1, text, div)
+import Html.Attributes exposing (class)
+
+-- bootstrap
+import Bootstrap.CDN as CDN
+import Bootstrap.Grid as Grid
 
 -- MODEL
 
@@ -21,8 +25,12 @@ view : Model -> Html Message
 view model =
   -- The inline style is being used for example purposes in order to keep this example simple and
   -- avoid loading additional resources. Use a proper stylesheet when building your own app.
-  h1 [style [("display", "flex"), ("justify-content", "center")]]
-     [text "Hello Elm!"]
+  Grid.container []
+    [ CDN.stylesheet
+    , div [ class "page-header" ]
+      [ h1 [] [ text "Hello from Elm!" ]
+      ]
+    ]
 
 -- MESSAGE
 
