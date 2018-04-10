@@ -21,3 +21,18 @@ services:
       - "4000:4000"
     depends_on:
       - db
+  comments:
+    image: clojure:lein-2.8.1
+    build: ./services/comments
+    stdin_open: true
+    tty: true
+    command: lein run
+    volumes:
+      - ./services/comments:/usr/src/app
+    ports:
+      - "9000:9000"
+    depends_on:
+      - db
+    environment:
+      VIRTUAL_HOST: "0.0.0.0"
+      CLOJURE_ENV: 'development'
