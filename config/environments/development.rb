@@ -56,6 +56,6 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   # Services APIs
-  config.comments_endpoint = 'http://comments:9000'
+  config.comments_endpoint = 'http://comments:9000/endpoint'
   config.posts_endpoint = 'http://posts:4000'
 end

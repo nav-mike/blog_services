@@ -17,6 +17,10 @@ module Graphql
       def make_client
         raise 'Not implemented yet!'
       end
+
+      def query(q, options = {})
+        client.query q, options
+      end
     end
   end
 

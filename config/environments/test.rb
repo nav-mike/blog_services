@@ -41,6 +41,6 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   # Services APIs
-  config.comments_endpoint = 'http://comments:9000'
+  config.comments_endpoint = 'http://comments:9000/endpoint'
   config.posts_endpoint = 'http://posts:4000'
 end

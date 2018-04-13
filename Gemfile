@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'faraday'
+gem 'net-ping'
 gem 'graphql-client'
 gem 'loofah', '~> 2.2.1'
 

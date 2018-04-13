@@ -11,6 +11,8 @@ services:
       - .:/myapp
     ports:
       - "9000:9000"
+    depends_on:
+      - comments
   posts:
     image: elixir:1.5.1
     build: ./services/posts
@@ -34,5 +36,4 @@ services:
     depends_on:
       - db
     environment:
-      VIRTUAL_HOST: "0.0.0.0"
       CLOJURE_ENV: 'development'
